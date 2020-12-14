@@ -58,7 +58,7 @@ html, body {
 }
 
 .swiper-slide {
-  @apply w-auto self-center my-40;
+  @apply w-auto self-center;
 }
 
 .swiper-slide img {

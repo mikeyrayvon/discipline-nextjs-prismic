@@ -61,7 +61,7 @@ const Gallery = forwardRef((props, ref) => {
                     full: 'w=688'
                   }}
                   pictureClass='w-full px-24'
-                  imgClass='w-full h-full object-contain'
+                  imgClass='w-full h-full object-contain mx-auto'
                 />
               )}
 
