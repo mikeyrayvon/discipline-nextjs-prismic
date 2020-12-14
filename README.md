@@ -7,19 +7,23 @@ Based on the [Prismic Next.js Blog Site Example](https://github.com/prismicio/ne
 
 
 ## Installation Flow
-### Install the prismic-cli
+### Clone this repo
 ```
-npm install -g prismic-cli
+git clone https://github.com/mikeyrayvon/discipline-nextjs-prismic.git my-project
+cd my-project
 ```
-### Run the theme command
-This will create a new Prismic content repository, setup the custom types, and install the project code
-```
-prismic theme --theme-url https://github.com/mikeyrayvon/discipline-nextjs-prismic
-```
-### Install dependencies
+
+### Create Prismic repo
+Create a new repo in Prismic and create Custom Types with the JSON from the `custom_types` directory.
+
+### Make .env
+Duplicate `.env.example` as `.env.local` and update the `API_ENDPOINT` value with the endpoint from your Prismic repo.
+
+### Install node packages
 ```
 yarn
 ```
+
 ### Run the project
 ```
 yarn dev
