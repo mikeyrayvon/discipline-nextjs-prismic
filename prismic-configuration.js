@@ -1,25 +1,25 @@
-module.exports = {
+// -- Prismic API endpoint
+// Determines which repository to query and fetch data from
+// Configure your site's access point here
+export const apiEndpoint = process.env.API_ENDPOINT
 
-  apiEndpoint: 'https://discipline-sandbox.cdn.prismic.io/api/v2',
+// -- Access Token if the repository is not public
+// Generate a token in your dashboard and configure it here if your repository is private
+export const accessToken = process.env.ACCESS_TOKEN
 
-  // -- Access token if the Master is not open
-  // accessToken: 'xxxxxx',
-
-  // OAuth
-  // clientId: 'xxxxxx',
-  // clientSecret: 'xxxxxx',
-
-  // -- Links resolution rules
-  // This function will be used to generate links to Prismic.io documents
-  // As your project grows, you should update this function according to your routes
-
-  linkResolver: function(doc, ctx) {
-    if (doc.type == 'post') return '/posts/' + doc.uid;
-    return '/';
-  },
-  
-  hrefResolver: function(doc, ctx) {
-    if (doc.type == 'post') return '/posts/[uid]';
-    return '/';
+// -- Link resolution rules
+// Manages the url links to internal Prismic documents
+export const linkResolver = (doc) => {
+  if (doc.type === 'post') {
+    return `/posts/${doc.uid}`
   }
-};
+  return '/'
+}
+
+// Additional helper function for Next/Link components
+export const hrefResolver = (doc) => {
+  if (doc.type === 'post') {
+    return '/posts/[uid]'
+  }
+  return '/'
+}
