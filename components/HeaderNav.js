@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { default as NextLink } from 'next/link'
 
 import Container from './Container'
