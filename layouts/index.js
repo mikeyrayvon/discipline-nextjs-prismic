@@ -1,5 +1,6 @@
 import Header from 'components/Header'
 import Footer from 'components/Footer'
+import CookiesNotice from 'components/CookiesNotice'
 
 const DefaultLayout = ({ settings, children }) => {
   return (
@@ -7,6 +8,7 @@ const DefaultLayout = ({ settings, children }) => {
       <Header settings={settings} />
       <main className='relative flex-grow'>{children}</main>
       <Footer settings={settings} />
+      <CookiesNotice />
     </div>
   )
 }
